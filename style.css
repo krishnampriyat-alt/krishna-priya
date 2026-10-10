@@ -1,0 +1,232 @@
+:root {
+    --bg-dark: #121212;
+    --bg-darker: #0a0a0a;
+    --text-main: #ffffff;
+    --text-muted: #a0a0a0;
+    --accent-color: #a855f7; /* Purple accent */
+    --accent-hover: #9333ea;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Typography & Colors */
+.text-accent {
+    color: var(--accent-color) !important;
+}
+
+.bg-dark {
+    background-color: var(--bg-dark) !important;
+}
+
+.bg-darker {
+    background-color: var(--bg-darker) !important;
+}
+
+.text-secondary {
+    color: var(--text-muted) !important;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(10, 10, 10, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: padding 0.3s ease;
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+.btn-outline-light {
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Hero Section */
+.hero-content h1 {
+    letter-spacing: 2px;
+}
+
+.profile-img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-img-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+.profile-img-wrapper:hover::after {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--accent-color) !important;
+    transform: translateY(-3px);
+}
+
+/* Sections */
+.section-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Cards & Hover Effects */
+.skill-card, .service-card, .project-card {
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-card:hover, .service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1) !important;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.15) !important;
+}
+
+.project-card img {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover img {
+    opacity: 1;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    border-left: 2px solid rgba(168, 85, 247, 0.3);
+}
+
+.timeline-item {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.6rem;
+    top: 1.5rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    border: 3px solid var(--bg-dark);
+}
+
+.timeline-item:hover {
+    transform: translateX(5px);
+}
+
+/* Contact forms */
+.form-control {
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    background-color: var(--bg-dark);
+    color: white;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(168, 85, 247, 0.25);
+}
+
+.form-control::placeholder {
+    color: rgba(255,255,255,0.4);
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+}
+
+.social-circle {
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-circle:hover {
+    background-color: var(--accent-color) !important;
+    transform: translateY(-3px);
+}
+
+.hover-accent:hover {
+    color: var(--accent-color) !important;
+}
